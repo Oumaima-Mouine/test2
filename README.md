@@ -1,16 +1,42 @@
-# formulaire
+# Formulaire d'inscription en Flutter
 
-A new Flutter project.
+## Description
+Ce projet est une application Flutter qui implémente un formulaire d'inscription simple avec les champs suivants :
+- Prénom
+- Nom
+- Email
+- Mot de passe
 
-## Getting Started
+Lorsque l'utilisateur clique sur le bouton "S'inscrire", un message de bienvenue s'affiche avec son prénom :
+> "Bienvenue, [Prénom] !"
 
-This project is a starting point for a Flutter application.
+## Technologies utilisées
+- Flutter
+- Dart
 
-A few resources to get you started if this is your first Flutter project:
+## Installation
+1. Assurez-vous d'avoir Flutter installé sur votre machine.
+2. Clonez ce dépôt :
+   ```sh
+   git clone <URL_DU_DEPOT>
+   ```
+3. Accédez au dossier du projet :
+   ```sh
+   cd nom_du_projet
+   ```
+4. Exécutez l'application :
+   ```sh
+   flutter run
+   ```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Fonctionnalités
+- Validation des champs du formulaire
+- Affichage d'un message de bienvenue avec le prénom de l'utilisateur
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Auteur
+Nom : [Votre Nom]
+Email : [Votre Email]
+
+## Licence
+Ce projet est sous licence MIT.
+
