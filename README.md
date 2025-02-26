@@ -11,7 +11,7 @@ Lorsque l'utilisateur clique sur le bouton "S'inscrire", un message de bienvenue
 > "Bienvenue, [Prénom] !"
 
 ## Technologies utilisées
-- Flutter
+- Flutter V1
 - Dart
 
 ## Installation
