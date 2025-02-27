@@ -5,6 +5,8 @@ import 'welcome_screen.dart';
 import '../services/auth_service.dart';
 
 class SignUpScreen extends StatefulWidget {
+  const SignUpScreen({super.key});
+
   @override
   _SignUpScreenState createState() => _SignUpScreenState();
 }

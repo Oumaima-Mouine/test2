@@ -4,7 +4,7 @@ class WelcomeScreen extends StatelessWidget {
   final String prenom;
   final String nom;
 
-  WelcomeScreen({required this.prenom, required this.nom});
+  const WelcomeScreen({super.key, required this.prenom, required this.nom});
 
   @override
   Widget build(BuildContext context) {

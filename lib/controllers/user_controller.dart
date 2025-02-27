@@ -11,7 +11,7 @@ if (user.prenom.isEmpty ||  user.nom.isEmpty ||
 }
 
     if(! _isValidEmail(user.email)){
-      throw Exception("format d'email invalidee ");;
+      throw Exception("format d'email invalidee ");
     }
 
     if (await _storageService.emailExists(user.email)) {
