@@ -1,6 +1,5 @@
 name: Flutter CI/CD
 
-# Déclenche le pipeline lors d'un push sur la branche main ou d'une pull request
 on:
   push:
     branches:
@@ -9,37 +8,40 @@ on:
     branches:
       - main
 
-# Définit les jobs à exécuter
 jobs:
   build:
-    runs-on: ubuntu-latest  # Utilise une machine virtuelle Ubuntu
+    runs-on: windows-latest  # Use a Windows virtual machine
 
     steps:
-      # Étape 1 : Checkout du code
+      # Step 1: Checkout the code
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Étape 2 : Configuration de Flutter
+      # Step 2: Set up Flutter
       - name: Set up Flutter
         uses: subosito/flutter-action@v1
         with:
-          channel: 'stable'  # Utilise la version stable de Flutter
+          channel: 'stable'  # Use the stable channel of Flutter
 
-      # Étape 3 : Installer les dépendances
+      # Step 3: Install dependencies
       - name: Install dependencies
         run: flutter pub get
 
-      # Étape 4 : Exécuter les tests
+      # Step 4: Run tests
       - name: Run tests
         run: flutter test
 
-      # Étape 5 : Build de l'application Android
+      # Step 5: Build the Android APK
       - name: Build Android APK
         run: flutter build apk --release
 
-      # Étape 6 : Upload de l'APK sur GitHub Releases (optionnel)
+      # Step 6: Upload the APK to GitHub Releases (optional)
       - name: Upload APK to GitHub Releases
         uses: actions/upload-artifact@v2
         with:
           name: app-release.apk
           path: build/app/outputs/flutter-apk/app-release.apk
+
+      # Step 7: Display a message
+      - name: Display message
+        run: echo "CI/CD pipeline has run successfully!"
